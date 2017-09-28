@@ -23,7 +23,7 @@ const client = new Client({
 
 client.connect();
 
-client.query('select now();', (err, res) => {
+client.query('select * from usuarios', (err, res) => {
     if (err) {
         console.log(JSON.stringify(err));
         throw err;
