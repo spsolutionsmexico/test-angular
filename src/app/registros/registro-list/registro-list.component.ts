@@ -23,6 +23,7 @@ export class RegistroListComponent implements OnInit {
     .getRegistros()
     .then((registros: Registro[]) => {
       this.registros = registros.map((registro) => {
+        console.log('registro= ',registro);
         return registro;
       });
     });

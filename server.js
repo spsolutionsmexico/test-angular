@@ -30,7 +30,7 @@ const client = new Client({
 client.connect();
 console.log("Database connection ready");
 
-client.query('select * from usuarios', (err, res) => {
+/*client.query('select * from usuarios', (err, res) => {
     if (err) {
         console.log(JSON.stringify(err));
         throw err;
@@ -39,13 +39,14 @@ client.query('select * from usuarios', (err, res) => {
         console.log(JSON.stringify(row));
     }
     client.end();
-});
+});*/
 //------------------------routes--------------------------
 /*  "/api/contacts"
  *    GET: finds all users
  *    POST: creates a new user
  */
 app.get("/api/registros", function(req, res) {
+    console.log('iniciando consulta');
     client.query('select * from usuarios', (err, res) => {
         if (err) {
             console.log(JSON.stringify(err));
