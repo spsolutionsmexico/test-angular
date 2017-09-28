@@ -18,7 +18,6 @@ function handleError(res, reason, message, code) {
     res.status(code || 500).json({ "error": message });
 }
 //-----------Data base connection-------------------------
-const bodyParser = require('body-parser');
 const JSONbig = require('json-bigint');
 const path = require('path');
 const { Client } = require('pg');
