@@ -1,3 +1,23 @@
 <p>
-  registro-list works!
+    registro-list works!
 </p>
+
+<div class="row">
+    <div class="col-md-5">
+        <h2>Registros</h2>
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let registro of registros" (click)="selectRegistro(registro)" [class.active]="registro === selectedRegistro">
+                {{registro.nombre}}
+            </li>
+        </ul>
+        <!--button class="btn btn-warning" (click)="createNewRegistro()">New</button-->
+    </div>
+    <div class="col-md-5 col-md-offset-2">
+        <!--contact-details
+      [contact]="selectedRegistro"
+      [createHandler]="addRegistro"
+      [updateHandler]="updateRegistro"
+      [deleteHandler]="deleteRegistro">
+    </contact-details-->
+    </div>
+</div>

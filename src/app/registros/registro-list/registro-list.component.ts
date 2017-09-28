@@ -1,15 +1,30 @@
+//import { Component, OnInit } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
+import { Registro } from '../registro';
+import { RegistroService } from '../registro.service';
+import { RegistroDetailsComponent } from '../registro-details/registro-details.component';
 
 @Component({
   selector: 'app-registro-list',
   templateUrl: './registro-list.component.html',
-  styleUrls: ['./registro-list.component.css']
+  styleUrls: ['./registro-list.component.css'],
+  providers: [RegistroService]
 })
 export class RegistroListComponent implements OnInit {
 
-  constructor() { }
+  registros: Registro[]
+  selectedRegistro: Registro
+
+  constructor(private registroService: RegistroService) { }
 
   ngOnInit() {
+    this.registroService
+    .getRegistros()
+    .then((registros: Registro[]) => {
+      this.registros = registros.map((registro) => {
+        return registro;
+      });
+    });
   }
 
 }
