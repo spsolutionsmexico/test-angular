@@ -5,7 +5,8 @@ import { RegistroService } from '../registro.service';
 import { RegistroDetailsComponent } from '../registro-details/registro-details.component';
 
 @Component({
-  selector: 'app-registro-list',
+  //selector: 'app-registro-list',
+  selector: 'registro-list',
   templateUrl: './registro-list.component.html',
   styleUrls: ['./registro-list.component.css'],
   providers: [RegistroService]
