@@ -1,5 +1,5 @@
 //import { Injectable } from '@angular/core';
-import { Injectable } from '@angular/core';
+/*import { Injectable } from '@angular/core';
 import { Registro } from './registro';
 import { Http, Response } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
@@ -26,11 +26,11 @@ export class RegistroService {
     error.status ? `${error.status} - ${error.statusText}` : 'Server error';
     console.log('errMsg: ',errMsg); // log to console instead
   }
-}
-/*import { Injectable } from '@angular/core';
+}*/
+import { Injectable } from '@angular/core';
 @Injectable()
 export class RegistroService {
 constructor() { 
   console.error('constructor getRegistros'); // log to console instead
 }
-}*/
+}
