@@ -13,20 +13,20 @@ import { RegistroDetailsComponent } from '../registro-details/registro-details.c
 })
 export class RegistroListComponent implements OnInit {
 
-  registros: Registro[]
-  selectedRegistro: Registro
+ // registros: Registro[]
+  //selectedRegistro: Registro
 
   constructor(private registroService: RegistroService) { }
 
   ngOnInit() {
-    this.registroService
+   /* this.registroService
     .getRegistros()
     .then((registros: Registro[]) => {
       this.registros = registros.map((registro) => {
         console.log('registro= ',registro);
         return registro;
       });
-    });
+    });*/
   }
 
 }
