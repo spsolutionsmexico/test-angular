@@ -58,7 +58,7 @@ app.get("/api/registros", function(req, res) {
             console.log(JSON.stringify(row));
         }
         client.end();
-        res.status(200).json(docs);
+        res.status(200).json(docs.rows);
     });
 });
 
