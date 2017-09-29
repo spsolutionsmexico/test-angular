@@ -8,10 +8,13 @@ import 'rxjs/add/operator/toPromise';
 export class RegistroService {
   private registrosUrl = '/api/registros';
 
-  constructor(private http: Http) { }
+  constructor(private http: Http) {
+    console.log('constructor(private');
+   }
   
   getRegistros(): Promise<void | Registro[]> {
     console.log('getRegistros start');
+    console.log('this.registrosUrl: ',this.registrosUrl);
     return this.http.get(this.registrosUrl)
                .toPromise()
                .then(response => response.json() as Registro[])

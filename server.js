@@ -2,6 +2,13 @@ const express = require('express');
 const app = express();
 var bodyParser = require("body-parser");
 
+var REGISTROS_COLLECTION = "registros";
+
+var app = express();
+app.use(bodyParser.json());
+
+var distDir = __dirname + "/dist/";
+app.use(express.static(distDir));
 
 app.use(express.static(__dirname + '/dist'));
 app.listen(process.env.PORT || 8080);
@@ -58,6 +65,7 @@ app.get("/api/registros", function(req, res) {
             console.log(JSON.stringify(row));
         }
         client.end();
+        REGISTROS_COLLECTION = JSON.stringify(docs.rows)
         res.status(200).json(docs.rows);
     });
 });
