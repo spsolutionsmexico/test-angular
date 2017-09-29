@@ -9,21 +9,21 @@ import { RegistroDetailsComponent } from '../registro-details/registro-details.c
   selector: 'registro-list',
   templateUrl: './registro-list.component.html',
   styleUrls: ['./registro-list.component.css'],
-  providers: [RegistroService]
+  //providers: [RegistroService]
 })
 export class RegistroListComponent implements OnInit {
 
-  registros: Registro[]
-  selectedRegistro: Registro
+  //registros: Registro[]
+  //selectedRegistro: Registro
 
-  constructor(private registroService: RegistroService) { 
+  /*constructor(private registroService: RegistroService) { 
     console.log('constructor registroService');
-  }
+  }*/
   //constructor() { } 
 
   ngOnInit() {
     console.log('ngOnInit');
-    try{
+   /* try{
     this.registroService
     .getRegistros()
     .then((registros: Registro[]) => {
@@ -34,7 +34,7 @@ export class RegistroListComponent implements OnInit {
     });
   }catch (err) {
     console.log('err ',err);
-  }
+  }*/
   }
 
 }
