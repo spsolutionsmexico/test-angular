@@ -47,16 +47,17 @@ console.log("Database connection ready");
  */
 app.get("/api/registros", function(req, res) {
     console.log('iniciando consulta');
-    client.query('select * from usuarios', (err, res) => {
+    client.query('select * from usuarios', (err, docs) => {
         if (err) {
             console.log(JSON.stringify(err));
             throw err;
         }
-        for (let row of res.rows) {
+        console.log('res', JSON.stringify(docs));
+        for (let row of docs.rows) {
             console.log(JSON.stringify(row));
         }
         client.end();
-        //res.status(200).json(res);
+        res.status(200).json(docs);
     });
 });
 
