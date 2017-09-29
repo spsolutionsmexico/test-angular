@@ -30,16 +30,17 @@ const client = new Client({
 client.connect();
 console.log("Database connection ready");
 
-/*client.query('select * from usuarios', (err, res) => {
+client.query('select * from usuarios', (err, res) => {
     if (err) {
         console.log(JSON.stringify(err));
         throw err;
     }
+    console.log('res: ', JSON.stringify(res));
     for (let row of res.rows) {
         console.log(JSON.stringify(row));
     }
     client.end();
-});*/
+});
 //------------------------routes--------------------------
 /*  "/api/contacts"
  *    GET: finds all users
