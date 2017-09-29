@@ -17,6 +17,7 @@ export class RegistroListComponent implements OnInit {
   //selectedRegistro: Registro
 
   //constructor(private registroService: RegistroService) { }
+  constructor() { } 
 
   ngOnInit() {
     console.log('ngOnInit');
