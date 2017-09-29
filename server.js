@@ -58,20 +58,7 @@ function handleError(res, reason, message, code) {
  */
 
 app.get("/api/registros", function(req, res) {
-    console.log('iniciando consulta');
-    client.query('select * from usuarios', (err, docs) => {
-        if (err) {
-            console.log(JSON.stringify(err));
-            throw err;
-        }
-        console.log('res', JSON.stringify(docs));
-        for (let row of docs.rows) {
-            console.log(JSON.stringify(row));
-        }
-        client.end();
-        REGISTROS_COLLECTION = JSON.stringify(docs.rows)
-        res.status(200).json(docs.rows);
-    });
+    res.status(200).json('{"id":"987654321","nombre":"papu de papus","cp":"12345"}');
 });
 
 
