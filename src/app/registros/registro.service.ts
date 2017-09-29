@@ -11,6 +11,7 @@ export class RegistroService {
   constructor(private http: Http) { }
 
   getRegistros(): Promise<void | Registro[]> {
+    console.error('getRegistros start'); // log to console instead
     return this.http.get(this.registrosUrl)
                .toPromise()
                .then(response => response.json() as Registro[])
