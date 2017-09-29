@@ -58,7 +58,7 @@ function handleError(res, reason, message, code) {
  */
 
 app.get("/api/registros", function(req, res) {
-    res.status(200).json('{"id":"987654321","nombre":"papu de papus","cp":"12345"}');
+    res.status(200).json('{{"id":"987654321","nombre":"papu de papus","cp":"12345"}}');
 });
 
 
