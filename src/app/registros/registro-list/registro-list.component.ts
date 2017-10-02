@@ -14,8 +14,8 @@ import { RegistroDetailsComponent } from '../registro-details/registro-details.c
 export class RegistroListComponent implements OnInit {
 
 //  registros: Registro[]
-  selectedRegistro: Registro
-  registros: [
+  //selectedRegistro: Registro
+  registros= [
     {
         id : 123456,
         nombre : "isra",
@@ -26,15 +26,16 @@ export class RegistroListComponent implements OnInit {
         nombre : "usuario1",
          cp: "2002"
     }
-  ]
-
-  constructor(private registroService: RegistroService) { 
-    console.log('constructor registroService');
-  }
-  //constructor() { } 
+  ];
+  //constructor(private registroService: RegistroService) { 
+  //  console.log('constructor registroService');
+  //}
+  constructor() {
+    console.log('constructor RegistroListComponent.ts');
+   } 
 
   ngOnInit() {
-    console.log('this.registroService.getRegistros: ',this.registroService.getRegistros());
+   console.log('ngOnInit');
 
    /* try{
     this.registroService
