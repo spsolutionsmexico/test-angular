@@ -1,4 +1,3 @@
-//import { Injectable } from '@angular/core';
 import { Injectable } from '@angular/core';
 import { Registro } from './registro';
 import { Http, Response } from '@angular/http';
@@ -40,4 +39,4 @@ export class RegistroService {
 constructor() { 
   console.error('constructor getRegistros'); // log to console instead
 }
-}
+}*/
