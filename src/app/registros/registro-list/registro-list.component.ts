@@ -15,8 +15,18 @@ export class RegistroListComponent implements OnInit {
 
 //  registros: Registro[]
   //selectedRegistro: Registro
-  private registroService: RegistroService;
-  registros= this.registroService.getRegistros;
+  registros= [
+    {
+        id : 123456,
+        nombre : "isra",
+        cp : "1001"
+    },
+    {
+        id : 7654321,
+        nombre : "usuario1",
+         cp: "2002"
+    }
+  ];
   //constructor(private registroService: RegistroService) { 
   //  console.log('constructor registroService');
   //}
