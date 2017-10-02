@@ -6,16 +6,14 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class RegistroService {
-  private registrosUrl = '/api/registros';
-  private http: Http;
+  //private registrosUrl = '/api/registros';
+  //private http: Http;
   constructor() {
     console.log('constructor RegistroService ');
    }
-   registros: Registro[];
 
   getRegistros(){
-    console.log('return getRegistros ');
-    this.registros= [
+    return [
       {
           id : "123456",
           nombre : "isra",
@@ -27,14 +25,13 @@ export class RegistroService {
            cp: "2002"
       }
     ];
-    return this.registros;
   }
     
-  private handleError (error: any) {
+ /* private handleError (error: any) {
     let errMsg = (error.message) ? error.message :
     error.status ? `${error.status} - ${error.statusText}` : 'Server error';
     console.log('errMsg: ',errMsg); // log to console instead
-  }
+  }*/
 }
 /*import { Injectable } from '@angular/core';
 @Injectable()
