@@ -40,4 +40,4 @@ export class RegistroService {
 constructor() { 
   console.error('constructor getRegistros'); // log to console instead
 }
-}/*
+}*/
