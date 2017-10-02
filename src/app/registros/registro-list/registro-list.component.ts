@@ -27,18 +27,13 @@ export class RegistroListComponent implements OnInit {
          cp: "2002"
     }
   ];
-  //constructor(private registroService: RegistroService) { 
-  //  console.log('constructor registroService');
-  //}
-  private registroService= RegistroService;
+  constructor(private registroService: RegistroService) { 
+    console.log('constructor registroService');
+  }
 
-  constructor() {
-    console.log('constructor RegistroListComponent.ts');
-   } 
-
+  
   ngOnInit() {
    console.log('ngOnInit');
-
    /* try{
     this.registroService
     .getRegistros()
