@@ -30,7 +30,7 @@ export class RegistroListComponent implements OnInit {
   //constructor(private registroService: RegistroService) { 
   //  console.log('constructor registroService');
   //}
-  private registroService= RegistroService;
+  private registroService: RegistroService;
 
   constructor() {
     console.log('constructor RegistroListComponent.ts');
@@ -38,7 +38,7 @@ export class RegistroListComponent implements OnInit {
 
   ngOnInit() {
    console.log('ngOnInit');
-   this.registroService
+
    /* try{
     this.registroService
     .getRegistros()
