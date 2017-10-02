@@ -9,7 +9,7 @@ import { RegistroDetailsComponent } from '../registro-details/registro-details.c
   selector: 'registro-list',
   templateUrl: './registro-list.component.html',
   styleUrls: ['./registro-list.component.css'],
-  //providers: [RegistroService]
+  providers: [RegistroService]
 })
 export class RegistroListComponent implements OnInit {
 
@@ -28,12 +28,13 @@ export class RegistroListComponent implements OnInit {
     }
   ];
   constructor(private registroService: RegistroService) { 
-    console.log('constructor registroService');
+   console.log('constructor registroService');
   }
 
   
   ngOnInit() {
    console.log('ngOnInit');
+   this.registroService
    /* try{
     this.registroService
     .getRegistros()
