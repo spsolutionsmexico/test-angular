@@ -11,22 +11,22 @@ export class RegistroService {
   constructor() {
     console.log('constructor RegistroService ');
    }
-   //registros: Registro[]
+   registros: Registro[];
 
-   registros= [
-    {
-        id : "123456",
-        nombre : "isra",
-        cp : "1001"
-    },
-    {
-        id : "654321",
-        nombre : "usuario1",
-         cp: "2002"
-    }
-  ];
   getRegistros(){
     console.log('return getRegistros ');
+    this.registros= [
+      {
+          id : "123456",
+          nombre : "isra",
+          cp : "1001"
+      },
+      {
+          id : "654321",
+          nombre : "usuario1",
+           cp: "2002"
+      }
+    ];
     return this.registros;
   }
     
