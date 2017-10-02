@@ -15,6 +15,7 @@ export class RegistroListComponent implements OnInit {
 
 //  registros: Registro[]
   //selectedRegistro: Registro
+  private registroService: RegistroService
   registros= [
     {
         id : 123456,
@@ -27,14 +28,14 @@ export class RegistroListComponent implements OnInit {
          cp: "2002"
     }
   ];
-  constructor(private registroService: RegistroService) { 
+  constructor() { 
    console.log('constructor registroService');
   }
 
   
   ngOnInit() {
    console.log('ngOnInit');
-   this.registroService
+   //this.registroService
    /* try{
     this.registroService
     .getRegistros()
