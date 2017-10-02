@@ -30,6 +30,8 @@ export class RegistroListComponent implements OnInit {
   //constructor(private registroService: RegistroService) { 
   //  console.log('constructor registroService');
   //}
+  private registroService= RegistroService;
+
   constructor() {
     console.log('constructor RegistroListComponent.ts');
    } 
