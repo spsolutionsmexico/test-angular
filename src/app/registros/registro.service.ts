@@ -11,21 +11,23 @@ export class RegistroService {
   constructor(private http: Http) {
     console.log('constructor RegistroService ');
    }
-  
+   //registros: Registro[]
+
+   registros= [
+    {
+        id : "123456",
+        nombre : "isra",
+        cp : "1001"
+    },
+    {
+        id : "654321",
+        nombre : "usuario1",
+         cp: "2002"
+    }
+  ];
   getRegistros(){
     console.log('return getRegistros ');
-    return [
-      {
-          id : 123456,
-          nombre : "isra",
-          cp : "1001"
-      },
-      {
-          id : 7654321,
-          nombre : "usuario1",
-           cp: "2002"
-      }
-    ]
+    return this.registros;
   }
     
   private handleError (error: any) {
