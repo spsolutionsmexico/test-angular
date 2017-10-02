@@ -1,3 +1,4 @@
+'use strict';
 //import { Component, OnInit } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { Registro } from '../registro';
