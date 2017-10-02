@@ -1,9 +1,11 @@
-//import { Component, OnInit } from '@angular/core';
+const { Client } = require('pg');
+var bodyParser = require("body-parser");
+const JSONbig = require('json-bigint');
+
 import { Component, OnInit } from '@angular/core';
 import { Registro } from '../registro';
 import { RegistroService } from '../registro.service';
 import { RegistroDetailsComponent } from '../registro-details/registro-details.component';
-const { Client } = require('pg');
 var db;
 const client = new Client({
   connectionString: process.env.DATABASE_URL,
