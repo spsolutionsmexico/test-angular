@@ -1,28 +1,8 @@
-const { Client } = require('pg');
-var bodyParser = require("body-parser");
-const JSONbig = require('json-bigint');
-
+//import { Component, OnInit } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { Registro } from '../registro';
 import { RegistroService } from '../registro.service';
 import { RegistroDetailsComponent } from '../registro-details/registro-details.component';
-var db;
-const client = new Client({
-  connectionString: process.env.DATABASE_URL,
-  ssl: true,
-});
-client.query('select * from usuarios', (err, res) => {
-  if (err) {
-      console.log(JSON.stringify(err));
-      throw err;
-  }
-  console.log('res: ', JSON.stringify(res));
-  const registros=res.rows;
-  /*for (let row of res.rows) {
-      console.log(JSON.stringify(row));
-  }*/
-  client.end();
-});
 
 @Component({
   //selector: 'app-registro-list',
@@ -35,7 +15,7 @@ export class RegistroListComponent implements OnInit {
 
 //  registros: Registro[]
   //selectedRegistro: Registro
-  /*registros= [
+  registros= [
     {
         id : 123456,
         nombre : "isra",
@@ -46,11 +26,27 @@ export class RegistroListComponent implements OnInit {
         nombre : "usuario1",
          cp: "2002"
     }
-  ];*/
+  ];
+  //constructor(private registroService: RegistroService) { 
+  //  console.log('constructor registroService');
+  //}
+  constructor() { } 
 
-  constructor() {} 
   ngOnInit() {
    console.log('ngOnInit');
+
+   /* try{
+    this.registroService
+    .getRegistros()
+    .then((registros: Registro[]) => {
+      this.registros = registros.map((registro) => {
+        console.log('registro= ',registro);
+        return registro;
+      });
+    });
+  }catch (err) {
+    console.log('err ',err);
+  }*/
   }
 
 }
