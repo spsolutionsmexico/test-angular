@@ -7,8 +7,8 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class RegistroService {
   private registrosUrl = '/api/registros';
-
-  constructor(private http: Http) {
+  private http: Http;
+  constructor() {
     console.log('constructor RegistroService ');
    }
    //registros: Registro[]
