@@ -34,8 +34,7 @@ export class RegistroListComponent implements OnInit {
 
   
   ngOnInit() {
-   console.log('ngOnInit');
-   //this.registroService
+   console.log('this.registroService.getRegistros: ',this.registroService.getRegistros());
    /* try{
     this.registroService
     .getRegistros()
