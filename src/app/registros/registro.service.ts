@@ -39,4 +39,18 @@ export class RegistroService {
 constructor() { 
   console.error('constructor getRegistros'); // log to console instead
 }
+getRegistros(){
+  return [
+    {
+        id : "123456",
+        nombre : "isra",
+        cp : "1001"
+    },
+    {
+        id : "654321",
+        nombre : "usuario1",
+         cp: "2002"
+    }
+  ];
+}
 }
